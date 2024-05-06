@@ -17,6 +17,46 @@ pub fn App() -> Html {
 			Exercise::from([
 				"Exercise 2",
 				"Abdomen",
+				"Lie on your back with your legs and the bottoms of you feet pointing up towards the ceiling. Place both arms on the floor above your head.",
+				"Take a deep breath, straighten your knee, and tighten the muscles in your legs. Curl your toes toward your face.",
+				"Move your left arm to the floor on the your left side while reaching your right hand towards the toes of your left foot.",
+				"Push your right hand further up towards the ceiling, trying to reach beyond the toes of your left foot.",
+				"Relax your abdomen and move both hands back to the floor about your head.  When your hands reach the floor, uncurl your toes and breathe out.",
+				"Practice Exercise 2 six times, then move on to Exercise 3."
+			]),
+			Exercise::from([
+				"Exercise 3",
+				"Back",
+				"Lie on your stomach with your palms touching the floor near your ears. Turn your head to look towards your right hand (left cheek on the floor).",
+				"Take a a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
+				"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
+				"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+				"Relax your back and move your head back to the floor, this time looking towards your left hand (right cheek on the floor).",
+				"Practice Exercise 3 six times, then move on to Exercise 4."
+			]),
+			Exercise::from([
+				"Exercise 2",
+				"Abdomen",
+				"Lie on your stomach with your palms touching the floor near your ears. Turn your head to look towards your right hand (left cheek on the floor).",
+				"Take a a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
+				"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
+				"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+				"Relax your back and move your head back to the floor, this time looking towards your left hand (right cheek on the floor).",
+				"Practice Exercise 2 six times, then move on to Exercise 3."
+			]),
+			Exercise::from([
+				"Exercise 2",
+				"Abdomen",
+				"Lie on your stomach with your palms touching the floor near your ears. Turn your head to look towards your right hand (left cheek on the floor).",
+				"Take a a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
+				"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
+				"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+				"Relax your back and move your head back to the floor, this time looking towards your left hand (right cheek on the floor).",
+				"Practice Exercise 2 six times, then move on to Exercise 3."
+			]),
+			Exercise::from([
+				"Exercise 2",
+				"Abdomen",
 				"Lie on your stomach with your palms touching the floor near your ears. Turn your head to look towards your right hand (left cheek on the floor).",
 				"Take a a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
 				"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
@@ -30,8 +70,8 @@ pub fn App() -> Html {
 	let headers = exercises.iter().map(|exercise| {
 		html! {
 			<th>
-				<p>{&exercise.name}</p>
 				<p class="tag is-info">{&exercise.target}</p>
+				<p>{&exercise.name}</p>
 			</th>
 		}
 	}).collect::<Vec<Html>>();

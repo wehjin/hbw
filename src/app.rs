@@ -107,23 +107,24 @@ pub fn App() -> Html {
 	<section class="section">
 	<div class="container">
 		<p class="title">{"Cycle 2 Exercises"}</p>
-		<table class="table">
-		<thead>
-		<tr>
-			<th>{"Name"}</th>
-			<th>{"Weights"}</th>
-			<th>{"Starting Position"}</th>
-			<th>{"Breathe In"}</th>
-			<th>{"Movement"}</th>
-			<th>{"Extra Movement"}</th>
-			<th>{"Breathe Out"}</th>
-			<th>{"Next"}</th>
-		</tr>
-		</thead>
-		<tbody>
-		{rows}
-		</tbody>
-		</table>
+		<div class="table-container">
+			<style>{"table, td, th {width: 12.5%}"}</style>
+			<table class="table is-bordered is-striped is-fullwidth">
+				<thead>
+					<tr>
+						<th>{"Name"}</th>
+						<th>{"Weights"}</th>
+						<th>{"Starting Position"}</th>
+						<th>{"Breathe In"}</th>
+						<th>{"Movement"}</th>
+						<th>{"Extra Movement"}</th>
+						<th>{"Breathe Out"}</th>
+						<th>{"Next"}</th>
+					</tr>
+				</thead>
+				<tbody>{rows}</tbody>
+			</table>
+		</div>
 	</div>
 	</section>
 	</>

@@ -8,11 +8,21 @@ pub fn App() -> Html {
 				"Exercise 1",
 				"Arms",
 				"Hold a 1 lb weight in each hand. Lie on your back with your arms spread out on both sides like the letter T. The palms of your hands are facing upwards toward the ceiling.",
-				"Take a deep breath, tighten the muscles in your legs while keeping the knees straight, and curl your toes toward your head.",
+				"Take a deep breath and tighten the muscles in your legs while keeping your knees straight. Curl your toes toward your face.",
 				"Raise your arms up and towards each other while keeping the elbows straight. Stop when your hands are straight above you and your arms are pointing towards the ceiling.",
 				"Push your hands up and closer to the ceiling using your shoulders and chest. Stop when your hands are as close to the ceiling as they go.",
 				"Relax your shoulders, then move your arms move back to the floor. When your hands reach the floors, uncurl your toes and breathe out.",
-				"Continue with Exercise 2."
+				"Practice Exercise 1 six times, then move on to Exercise 2."
+			]),
+			Exercise::from([
+				"Exercise 2",
+				"Abdomen",
+				"Lie on your stomach with your palms touching the floor near your ears. Turn your head to look towards your right hand (left cheek on the floor).",
+				"Take a a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
+				"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
+				"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+				"Relax your back and move your head back to the floor, this time looking towards your left hand (right cheek on the floor).",
+				"Practice Exercise 2 six times, then move on to Exercise 3."
 			]),
 		]
 	});

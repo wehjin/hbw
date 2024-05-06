@@ -12,7 +12,7 @@ pub fn App() -> Html {
 				"Raise your arms up and towards each other while keeping the elbows straight. Stop when your hands are straight above you and your arms are pointing towards the ceiling.",
 				"Push your hands up and closer to the ceiling using your shoulders and chest. Stop when your hands are as close to the ceiling as they go.",
 				"Relax your shoulders, then move your arms move back to the floor. When your hands reach the floors, uncurl your toes and breathe out.",
-				"Practice Exercise 7 six times, then move on to Exercise 8.",
+				"Train Exercise 7 six times, then move on to Exercise 8.",
 				"1 lb x 2",
 			]),
 			Exercise::from([
@@ -23,7 +23,7 @@ pub fn App() -> Html {
 				"Move your left arm to the floor on the your left side while reaching your right hand towards the toes of your left foot. Stop when your right hand reaches your toes.",
 				"Push your right hand further up towards the ceiling, trying to reach beyond the toes of your left foot.",
 				"Relax your abdomen and move both hands back to the floor about your head.  When your hands reach the floor, uncurl your toes and breathe out.",
-				"Practice Exercise 8 six times, then move on to Exercise 9.",
+				"Train Exercise 8 six times, then move on to Exercise 9.",
 				"",
 			]),
 			Exercise::from([
@@ -45,7 +45,7 @@ pub fn App() -> Html {
 				"Move your right hand down (leave the left hand on your leg) and grab the weight with your right hand. Bring the weight straight up to your chest using your right arm. Stop when your right elbow is fully bent and the weight is near your chest.",
 				"Turn your entire upper body to your right and look at the wall on your right while keeping the weight at your chest. The weight should move upwards as your torso rotates. Stop when your torso is facing the right wall,",
 				"Relax your torso and arm, and move the weight back to the floor in front of you. When the weight is on the floor, uncurl your toes and breathe out.",
-				"Practice Exercise 10 six times (3 times right, 3 times left), then move on to Exercise 11.",
+				"Train Exercise 10 six times (3 times right, 3 times left), then move on to Exercise 11.",
 				"8-lb x 1",
 			]),
 			Exercise::from([
@@ -56,7 +56,7 @@ pub fn App() -> Html {
 				"1. Bend your elbows and bring the weights forward in front of you eyes. 2. Then rotate your arms outwards and stop when the weights are by your ears. 3. Push the weights straight up towards the ceiling and stop when your elbows are straight. 4. Squat down by bending your knees and pushing your butt backwards. Keep your arms straight and above your head. Stop when your knees are fully bent. 5. Stand back up while keeping your arms straight and above your head.",
 				"",
 				"1. Bend your elbows and bring the weights down and stop when they are near your ears. 2. Rotate your arms towards each other and stop when your hands and the weights are directly in front of your eyes. 3. Drop your hands and until the weights are at your side by your legs. 4. Uncurl your toes and breathe out.",
-				"Practice Exercise 11 six times, then move on to Exercise 12.",
+				"Train Exercise 11 six times, then move on to Exercise 12.",
 				"3-lb x 2",
 			]),
 			Exercise::from([
@@ -67,7 +67,7 @@ pub fn App() -> Html {
 				"1. Keeping your legs straight, bend at the hip and allow the weights to descend toward the floor while keeping your elbows straight. 2. When the weights are close to the floor, stand back up and bring the weights back to their original position by your legs (keep arms straight).",
 				"1. Move the weights up by lifting your shoulders up (while keeping arms straight and hanging down). 2. Stand up on your toes.",
 				"1. Stop standing on your toes. 2. Drop your shoulders. 3. Uncurl your toes and breathe out.",
-				"Practice Exercise 12 six times, then start again at Exercise 12 for 2 more cycles.",
+				"Train Exercise 12 six times, then start again at Exercise 7 for 2 more rounds of Cycle B.",
 				"5-lb x 2",
 			]),
 		]
@@ -106,7 +106,7 @@ pub fn App() -> Html {
 	<>
 	<section class="section">
 	<div class="container">
-		<p class="title">{"Cycle 2 Exercises"}</p>
+		<p class="title">{"Cycle B Exercises"}</p>
 		<div class="table-container">
 			<style>{"table, td, th {width: 12.5%}"}</style>
 			<table class="table is-bordered is-striped is-fullwidth">

@@ -47,8 +47,8 @@ pub fn App() -> Html {
 			Exercise::from([
 				"Exercise 11",
 				"Legs",
-				"Stand with legs shoulder-width apart and hands down by your side hold a 3-lb weight in each hand.",
-				"Take a deep breath and tighten the muscles in your legs while keeping your legs straight. Curl your toes toward your face.",
+				"Pick up two 3-lb weights, one in each hand. Stand with legs shoulder-width apart and weights at your side by your legs.",
+				"Take a deep breath and tighten the muscles in your legs while keeping your legs straight. Curl your toes upward.",
 				"1. Bend your elbows and bring the weights forward in front of you eyes. 2. Then rotate your arms outwards and stop when the weights are by your ears. 3. Push the weights straight up towards the ceiling and stop when your elbows are straight. 4. Squat down by bending your knees and pushing your butt backwards. Keep your arms straight and above your head. Stop when your knees are fully bent. 5. Stand back up while keeping your arms straight and above your head.",
 				"",
 				"1. Bend your elbows and bring the weights down and stop when they are near your ears. 2. Rotate your arms towards each other and stop when your hands and the weights are directly in front of your eyes. 3. Drop your hands and until the weights are at your side by your legs. 4. Uncurl your toes and breathe out.",
@@ -56,12 +56,12 @@ pub fn App() -> Html {
 			]),
 			Exercise::from([
 				"Exercise 12",
-				"Arms",
-				"",
-				"",
-				"",
-				"",
-				"",
+				"Lower Back",
+				"Pick up two 5-lb weights, one in each hand. Stand with legs should-width apart and weights by your legs slightly in front of you.",
+				"Take a deep breath and tighten the muscles in your legs while keeping your legs straight.  Curl your toes upward.",
+				"1. Keeping your legs straight, bend at the hip and allow the weights to descend toward the floor while keeping your elbows straight. 2. When the weights are close to the floor, stand back up and bring the weights back to their original position by your legs (keep arms straight).",
+				"1. Move the weights up by lifting your shoulders up (while keeping arms straight and hanging down). 2. Stand up on your toes.",
+				"1. Stop standing on your toes. 2. Drop your shoulders. 3. Uncurl your toes and breathe out.",
 				"Practice Exercise 12 six times, then start again at Exercise 12 for 2 more cycles."
 			]),
 		]
@@ -70,7 +70,7 @@ pub fn App() -> Html {
 	let headers = exercises.iter().map(|exercise| {
 		html! {
 			<th>
-				<p class="tag is - info">{&exercise.target}</p>
+				<p class="tag is-info">{&exercise.target}</p>
 				<p>{&exercise.name}</p>
 			</th>
 		}
@@ -109,10 +109,8 @@ pub fn App() -> Html {
 	<>
 	<section class="section">
 	<div class="container">
-		<h1 class="title">{"Happy Body Worksheet"}</h1>
-		<p class="subtitle">{"My first website with "}<strong>{"Bulma"}</strong>{"!"}</p>
-		<p>{"Base Weight: "}<span class="tag is - primary is - light is - large">{"3 lbs"}</span></p>
-		<p class="title is - 4">{"Section 2 Exercises"}</p>
+		<p class="title">{"Cycle 2 Exercises"}</p>
+		<p><span class="tag is-primary is-light is-large">{"Base Weight:\u{00a0}"}<strong>{"3 lbs"}</strong> </span></p>
 		<p>
 		<table class="table">
 		<thead>

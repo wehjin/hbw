@@ -17,7 +17,10 @@ pub fn App() -> Html {
 					"Raise your arms up and towards each other while keeping the elbows straight. Stop when your hands are straight above you and your arms are pointing towards the ceiling.",
 				),
 			],
-			"Push your hands up and closer to the ceiling using your shoulders and chest. Stop when your hands are as close to the ceiling as they go.",
+			Some(Step::new(
+				"assets/ex07_extra.png",
+				"Push your hands up and closer to the ceiling using your shoulders and chest. Stop when your hands are as close to the ceiling as possible.",
+			)),
 			"Relax your shoulders, then move your arms move back to the floor. When your hands reach the floors, uncurl your toes and breathe out.",
 			"Train Exercise 7 six times, then move on to Exercise 8.",
 			"1-lb x 2",
@@ -36,7 +39,10 @@ pub fn App() -> Html {
 					"Move your left arm near the floor on the your left side while reaching your right hand towards the toes of your left foot. Stop when your right hand reaches your toes.",
 				),
 			],
-			"Push your right hand further up towards the ceiling, trying to reach beyond the toes of your left foot.",
+			Some(Step::new(
+				"assets/ex08_extra.png",
+				"Push your right hand further up towards the ceiling, trying to reach beyond the toes of your left foot.",
+			)),
 			"Relax your abdomen and move both hands back to the floor about your head.  When your hands reach the floor, uncurl your toes and breathe out.",
 			"Train Exercise 8 six times, then move on to Exercise 9.",
 			"",
@@ -55,7 +61,10 @@ pub fn App() -> Html {
 					"Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the wall in front of you.",
 				),
 			],
-			"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+			Some(Step::new(
+				"assets/ex09_extra.png",
+				"Tighten your back and tilt your head even further. Stop when you are looking at the spot where the wall in front of you meets the ceiling.",
+			)),
 			"Relax your back and move your head back to the floor, this time looking towards your left hand (right cheek on the floor). When your cheek is back on the floor, relax your legs and breathe out.",
 			"Train Exercise 9 six times, then move on to Exercise 10.",
 			"",
@@ -78,7 +87,10 @@ pub fn App() -> Html {
 					"View from above.",
 				),
 			],
-			"Turn your entire upper body to your right and look at the wall on your right while keeping the weight at your chest. The weight should move upwards as your torso rotates. Stop when your torso is facing the right wall,",
+			Some(Step::new(
+				"assets/ex10_extra.png",
+				"Turn your entire upper body to your right and look at the wall on your right. The weight should move upwards as your torso rotates. Stop when your torso is facing the right wall,",
+			)),
 			"Relax your torso and arm, and move the weight back to the floor in front of you. When the weight is on the floor, uncurl your toes and breathe out.",
 			"Train Exercise 10 six times (3 times right, 3 times left), then move on to Exercise 11.",
 			"8-lb x 1",
@@ -113,7 +125,7 @@ pub fn App() -> Html {
 					"5. Stand back up while keeping your arms straight and above your head.",
 				),
 			],
-			"",
+			None,
 			"1. Bend your elbows and bring the weights down and stop when they are near your ears. 2. Rotate your arms towards each other and stop when your hands and the weights are directly in front of your eyes. 3. Drop your hands and until the weights are at your side by your legs. 4. Uncurl your toes and breathe out.",
 			"Train Exercise 11 six times, then move on to Exercise 12.",
 			"3-lb x 2",
@@ -136,7 +148,10 @@ pub fn App() -> Html {
 					"2. When the weights touch the floor or are as close to the floor as is comfortable, stand back up while still keeping both arms and legs straight and hanging.",
 				),
 			],
-			"1. Move the weights up by lifting your shoulders up (while keeping arms straight and hanging down). 2. Stand up on your toes.",
+			Some(Step::new(
+				"assets/ex12_extra.png",
+				"1. Move the weights up by lifting your shoulders up (while keeping arms straight and hanging down). 2. Stand up on your toes.",
+			)),
 			"1. Stop standing on your toes. 2. Drop your shoulders. 3. Uncurl your toes and breathe out.",
 			"Train Exercise 12 six times, then start again at Exercise 7 for 2 more rounds of Cycle B.",
 			"5-lb x 2",
@@ -161,10 +176,10 @@ pub fn App() -> Html {
 					{&exercise.primary}
 				</td>
 				<td>
-					if {exercise.extra.is_empty()} {
+					if {exercise.extra.is_none()} {
 						{"None"}
 					} else {
-						{&exercise.extra}
+						{exercise.extra.clone().unwrap().to_html()}
 					}
 				</td>
 				<td>{&exercise.breath_out}</td>
@@ -233,21 +248,21 @@ struct Exercise {
 	pub start: Step,
 	pub breath_in: String,
 	pub primary: Vec<Step>,
-	pub extra: String,
+	pub extra: Option<Step>,
 	pub breath_out: String,
 	pub next: String,
 	pub equipment: String,
 }
 
 impl Exercise {
-	pub fn new(name: &str, target: &str, start: Step, energize: &str, primary: Vec<Step>, extra: &str, relax: &str, next: &str, equipment: &str) -> Self {
+	pub fn new(name: &str, target: &str, start: Step, energize: &str, primary: Vec<Step>, extra: Option<Step>, relax: &str, next: &str, equipment: &str) -> Self {
 		Self {
 			name: name.to_string(),
 			target: target.to_string(),
 			start,
 			breath_in: energize.to_string(),
 			primary,
-			extra: extra.to_string(),
+			extra,
 			breath_out: relax.to_string(),
 			next: next.to_string(),
 			equipment: equipment.to_string(),

@@ -100,10 +100,7 @@ pub fn App() -> Html {
 					if {!exercise.equipment.is_empty()} {
 						<p><span class="tag is-info is-medium">{&exercise.equipment}</span></p>
 					}
-					<figure class="image is-square">
-						<img src={exercise.start_position.image_url.to_string()} />
-					</figure>
-					<p>{&exercise.start_position.caption}</p>
+					{exercise.start_position.to_html()}
 				</td>
 				<td>{&exercise.breath_in}</td>
 				<td>{&exercise.primary}</td>
@@ -157,6 +154,16 @@ struct Step {
 impl Step {
 	pub fn new(image_url: &str, caption: &str) -> Self {
 		Self { caption: caption.to_string(), image_url: image_url.to_string() }
+	}
+	pub fn to_html(&self) -> Html {
+		html! {
+			<>
+			<figure class="image is-square">
+				<img src={self.image_url.to_string()} />
+			</figure>
+			<p>{&self.caption}</p>
+			</>
+		}
 	}
 }
 

@@ -2,7 +2,7 @@ use yew::prelude::*;
 
 #[function_component]
 pub fn App() -> Html {
-	let world = use_state(|| [
+	let state = [
 		Exercise::new(
 			"Exercise 7",
 			"Arms",
@@ -214,62 +214,106 @@ pub fn App() -> Html {
 			"Train Exercise 12 six times, then start again at Exercise 7 for 2 more rounds of Cycle B.",
 			"5-lb x 2",
 		),
-	]);
+	];
+
+	let world = use_state(|| state);
 	let exercises = &*world;
-	let rows = exercises.iter().map(|exercise| {
+	let cards = exercises.iter().map(|exercise| {
 		html! {
-			<tr>
-				<th>
-					<p>{&exercise.name}</p>
-					<p class="tag is-info is-light">{&exercise.target}</p>
-				</th>
-				<td>
-					if {!exercise.equipment.is_empty()} {
-						<p><span class="tag is-info is-medium">{&exercise.equipment}</span></p>
-					}
-					{exercise.start.to_html()}
-				</td>
-				<td>{&exercise.breath_in}</td>
-				<td>
-					{&exercise.primary}
-				</td>
-				<td>
-					if {exercise.extra.is_none()} {
-						{"None"}
-					} else {
-						{exercise.extra.clone().unwrap().to_html()}
-					}
-				</td>
-				<td>{&exercise.breath_out}</td>
-				<td>{&exercise.next}</td>
-			</tr>
+			<div class="card" style="break-after:page">
+			<div class="card-content">
+			    <div class="media">
+					<div class="media-content">
+						<p class="title">{&exercise.name}</p>
+					</div>
+					<div class="media-right">
+						<p class="tag is-info is-light">{&exercise.target}</p>
+					</div>
+			    </div>
+			    <div class="content">
+					<div>
+						<p class="tag is-primary">{"Starting Position"}</p>
+						if {!exercise.equipment.is_empty()} {
+							<p><span class="tag is-info is-medium">{&exercise.equipment}</span></p>
+						}
+						<div class="pl-6">
+							{exercise.start.to_html()}
+						</div>
+					</div>
+					<div>
+						<p class="tag is-primary">{"Breathe In"}</p>
+						<div class="pl-6 media">
+							<figure class="media-left">
+								<p class="image is-128x128">
+								</p>
+							</figure>
+							<div class="media-content">
+								<p>{&exercise.breath_in}</p>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div>
+						<p class="tag is-primary">{"Primary Movement"}</p>
+						<div class="pl-6">{&exercise.primary}</div>
+					</div>
+					<br/>
+					<div>
+						<p class="tag is-primary">{"Extra Movement"}</p>
+						if {exercise.extra.is_none()} {
+							<div class="pl-6 media">
+								<figure class="media-left">
+									<p class="image is-128x128">
+									</p>
+								</figure>
+								<div class="media-content">
+									<p>{"None"}</p>
+								</div>
+							</div>
+						} else {
+							<div class="pl-6">
+									{exercise.extra.clone().unwrap().to_html()}
+							</div>
+						}
+					</div>
+					<br/>
+					<div>
+						<p class="tag is-primary">{"Breathe Out"}</p>
+						<div class="pl-6">
+							{&exercise.breath_out}
+						</div>
+					</div>
+					<br/>
+					<div>
+						<p class="tag is-primary">{"Next"}</p>
+						<div class="pl-6 media">
+							<figure class="media-left">
+								<p class="image is-128x128">
+								</p>
+							</figure>
+							<div class="media-content">
+								<p>{&exercise.next}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
 		}
 	}).collect::<Vec<Html>>();
 	html! {
-	<>
-	<section class="section">
-	<div class="container">
-		<p class="title">{"Cycle B Exercises"}</p>
-		<div class="table-container">
-			<style>{"table, td, th {width: 12.5%}"}</style>
-			<table class="table is-bordered is-striped is-fullwidth">
-				<thead>
-					<tr>
-						<th>{"Name"}</th>
-						<th>{"Starting Position"}</th>
-						<th>{"Breathe In"}</th>
-						<th>{"Movement"}</th>
-						<th>{"Extra Movement"}</th>
-						<th>{"Breathe Out"}</th>
-						<th>{"Next"}</th>
-					</tr>
-				</thead>
-				<tbody>{rows}</tbody>
-			</table>
+		<section class="section">
+		<div class="container">
+			<div class="hero is-small is-primary">
+			  <div class="hero-body">
+			    <p class="title">{"Cycle B"}</p>
+			    <p class="subtitle">{"Exercises 7-12"}</p>
+			  </div>
+			</div>
+			<br/>
+			{cards}
 		</div>
-	</div>
-	</section>
-	</>
+		</section>
 	}
 }
 
@@ -289,12 +333,16 @@ impl Step {
 impl ToHtml for Step {
 	fn to_html(&self) -> Html {
 		html! {
-			<>
-			<figure class="image is-square">
-				<img src={self.image_url.to_string()} />
-			</figure>
-			<p>{&self.caption}</p>
-			</>
+			<div class="media">
+				<figure class="media-left">
+					<p class="image is-128x128 is-square">
+						<img src={self.image_url.to_string()} width=128 height=128 />
+					</p>
+				</figure>
+				<div class="media-content">
+					<p>{&self.caption}</p>
+				</div>
+			</div>
 		}
 	}
 }

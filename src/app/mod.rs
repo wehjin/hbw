@@ -8,8 +8,7 @@ use crate::app::sequence::import_sequence_b;
 pub fn App() -> Html {
 	let sequence = import_sequence_b().unwrap();
 	let world = use_state(|| sequence);
-	let exercises = &world.exercises;
-	let cards = exercises.iter().map(|exercise| {
+	let cards = world.exercises.iter().map(|exercise| {
 		html! {
 			<div class="card" style="break-after:page">
 			<div class="card-content">

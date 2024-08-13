@@ -1,4 +1,7 @@
 {
+  "name": "B",
+  "start_num": 7,
+  "end_num": 12,
   "exercises": [
     {
       "name": "Exercise 7",
@@ -24,7 +27,7 @@
           "image_url": "assets/ex07_motion.png"
         },
         {
-          "caption": "2. Move your arms move back to the floor. When your hands reach the floors, uncurl your toes and breathe out.",
+          "caption": "2. Move your arms move back to the floor. When your hands reach the floor, uncurl your toes and breathe out.",
           "image_url": "assets/ex07_start.png"
         }
       ],

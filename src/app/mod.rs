@@ -1,15 +1,69 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
 
 use step::Step;
 
-use crate::app::sequence::import_sequence_b;
+use crate::app::exercise::Exercise;
+use crate::app::sequence::{Cycle, import_cycle};
 
 #[function_component]
 pub fn App() -> Html {
-	let sequence = import_sequence_b().unwrap();
-	let world = use_state(|| sequence);
-	let cards = world.exercises.iter().map(|exercise| {
-		html! {
+	html! {
+        <BrowserRouter>
+            <Switch<Route> render={switch} />
+        </BrowserRouter>
+    }
+}
+
+#[derive(Clone, Routable, PartialEq)]
+enum Route {
+	#[at("/")]
+	Home,
+	#[at("/c")]
+	C,
+}
+
+fn switch(routes: Route) -> Html {
+	let cycle = match routes {
+		Route::Home => Cycle::B,
+		Route::C => Cycle::C,
+	};
+	sequence(cycle)
+}
+
+fn sequence(cycle: Cycle) -> Html {
+	let sequence = import_cycle(cycle).unwrap();
+	let title = format!("Cycle {}", sequence.name.to_uppercase());
+	let subtitle = format!("Ex {}-{}", sequence.start_num, sequence.end_num);
+	let cards = sequence.exercises.iter().map(exercise).collect::<Vec<Html>>();
+	let (b_class, c_class) = match cycle {
+		Cycle::B => ("is-active", ""),
+		Cycle::C => ("", "is-active"),
+	};
+	html! {
+		<section class="section">
+		<div class="tabs">
+		  <ul>
+		    <li class={b_class}><Link<Route> to={Route::Home}>{"Cycle B"}</Link<Route>></li>
+		    <li class={c_class}><Link<Route> to={Route::C}>{"Cycle C"}</Link<Route>></li>
+		  </ul>
+		</div>
+		<div class="container">
+			<div class="hero is-small is-primary">
+			  <div class="hero-body">
+			    <p class="title">{title}</p>
+			    <p class="subtitle">{subtitle}</p>
+			  </div>
+			</div>
+			<br/>
+			{cards}
+		</div>
+		</section>
+	}
+}
+
+fn exercise(exercise: &Exercise) -> Html {
+	let html: Html = html! {
 			<div class="card" style="break-after:page">
 			<div class="card-content">
 			    <div class="media">
@@ -89,22 +143,8 @@ pub fn App() -> Html {
 				</div>
 			</div>
 			</div>
-		}
-	}).collect::<Vec<Html>>();
-	html! {
-		<section class="section">
-		<div class="container">
-			<div class="hero is-small is-primary">
-			  <div class="hero-body">
-			    <p class="title">{"Cycle B"}</p>
-			    <p class="subtitle">{"Exercises 7-12"}</p>
-			  </div>
-			</div>
-			<br/>
-			{cards}
-		</div>
-		</section>
-	}
+		};
+	html
 }
 
 pub mod step;

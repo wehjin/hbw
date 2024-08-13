@@ -1,0 +1,202 @@
+{
+  "name": "C",
+  "start_num": 13,
+  "end_num": 18,
+  "exercises": [
+    {
+      "name": "Exercise 13",
+      "target": "Arms",
+      "start": {
+        "caption": "Hold a 5 lb weight in front of you using two hands. Lie on your back with the weight on the ground above your head. Keep your legs flat on the ground.",
+        "image_url": ""
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs while keeping your knees straight. Curl your toes toward your face.",
+      "primary": [
+        {
+          "caption": "Keep your arms straight and move the weight toward the ceiling without bending your elbows. Keep the back of your head against the ground. Stop when the weight is in the air in front of your face and your arms are pointing at the ceiling.",
+          "image_url": ""
+        }
+      ],
+      "extra": {
+        "caption": "Push the weight one inch closer to the ceiling using your shoulders.",
+        "image_url": ""
+      },
+      "breath_out": [
+        {
+          "caption": "Relax your shoulders and move the weight to its original position on the floor above your head. When your hands reach the floor, uncurl your toes and breathe out.",
+          "image_url": ""
+        }
+      ],
+      "next": "Train Exercise 13 six times, then move on to Exercise 14.",
+      "equipment": "5-lb x 1"
+    },
+    {
+      "name": "Exercise 14",
+      "target": "Abdomen",
+      "start": {
+        "caption": "Lie on your back with your legs flat on the ground. Place your hands together on the floor above your head.",
+        "image_url": ""
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs. Curl your toes toward your face.",
+      "primary": [
+        {
+          "caption": "Move your arms forward and touch your toes. Pause for a moment. If you are not yet able to sit up, just move your hands into the air in front of your face.",
+          "image_url": ""
+        }
+      ],
+      "extra": {
+        "caption": "Push your hands one inch past your toes.  Or if not yet able to sit up, push your hands one inch closer to the ceiling by tightening your stomach.",
+        "image_url": ""
+      },
+      "breath_out": [
+        {
+          "caption": "Lie back down and move your hands back to their original position on the floor above your head.  When your hands reach the floor, uncurl your toes and breathe out.",
+          "image_url": ""
+        }
+      ],
+      "next": "Train Exercise 14 six times, then move on to Exercise 15.",
+      "equipment": ""
+    },
+    {
+      "name": "Exercise 15",
+      "target": "Back",
+      "start": {
+        "caption": "Lie on your stomach with your arms by your side. Turn your head to look towards your right (left cheek on the floor).",
+        "image_url": ""
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs while keeping your knees straight. Point your toes away from your face.",
+      "primary": [
+        {
+          "caption": "Turn your face to look straight ahead and raise your head and chest off the floor. Stop when you are looking at the point where the wall in front of you touches the ceiling.",
+          "image_url": ""
+        }
+      ],
+      "extra": {
+        "caption": "Tighten your back and tilt your head one inch further. Stop when you are looking at the ceiling.",
+        "image_url": ""
+      },
+      "breath_out": [
+        {
+          "caption": "Relax and move your head back to the original position but facing the opposite direction (right cheek on the floor). When your cheek is back on the floor, relax your legs and breathe out.",
+          "image_url": ""
+        }
+      ],
+      "next": "Train Exercise 15 six times, then move on to Exercise 16.",
+      "equipment": ""
+    },
+    {
+      "name": "Exercise 16",
+      "target": "Arms",
+      "start": {
+        "caption": "Stand with feet shoulder-width apart, holding a 1-lb weight in each hand.",
+        "image_url": ""
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs while keeping your knees bent. Curl your toes toward your face.",
+      "primary": [
+        {
+          "caption": "Bend your elbows and move the weights up in front of you. Stop when your elbows are bent 90 degrees.",
+          "image_url": ""
+        },
+        {
+          "caption": "While keeping your hands in front, rotate your hands so that your palms are facing up towards the ceiling.",
+          "image_url": ""
+        },
+        {
+          "caption": "Rotate your left arm to your left side and rotate your right arm to your right side.",
+          "image_url": ""
+        }
+      ],
+      "extra": {
+        "caption": "Rotate your left arm an inch further to your left and your right arm an inch further to your right by tightening your upper back and shoulder blades.",
+        "image_url": ""
+      },
+      "breath_out": [
+        {
+          "caption": "Rotate both arms back to the front, rotate your hands, and unbend your elbows. Stop when back in the original position. Breath out and uncurl your toes.",
+          "image_url": ""
+        }
+      ],
+      "next": "Train Exercise 16 six times, then move on to Exercise 17.",
+      "equipment": "1-lb x 2"
+    },
+    {
+      "name": "Exercise 17",
+      "target": "Legs",
+      "start": {
+        "caption": "Pick up two 3-lb weights, one in each hand. Stand with legs shoulder-width apart and weights at your side by your legs.",
+        "image_url": "assets/ex11_start.png"
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs while keeping your legs straight. Curl your toes upward.",
+      "primary": [
+        {
+          "caption": "1. Bend your elbows and bring the weights forward in front of you eyes.",
+          "image_url": "assets/ex11_motion_a.png"
+        },
+        {
+          "caption": "2. Then rotate your arms outwards and stop when the weights are by your ears.",
+          "image_url": "assets/ex11_motion_b.png"
+        },
+        {
+          "caption": "3. Squat down by bending your knees and pushing your butt backwards. Keep your arms bent with the weights by ears. Stop when your knees are fully bent.",
+          "image_url": ""
+        },
+        {
+          "caption": "4. Move the weights by your ears straight up towards the ceiling. Stop when your elbows are straight.",
+          "image_url": "assets/ex11_motion_d.png"
+        },
+        {
+          "caption": "5. Stand back up while keeping your arms straight and above your head.",
+          "image_url": "assets/ex11_motion_e.png"
+        }
+      ],
+      "extra": null,
+      "breath_out": [
+        {
+          "caption": "1. Bend your elbows and bring the weights down and stop when they are near your ears.",
+          "image_url": "assets/ex11_motion_b.png"
+        },
+        {
+          "caption": "2. Rotate your arms towards each other and stop when your hands and the weights are directly in front of your eyes.",
+          "image_url": "assets/ex11_motion_a.png"
+        },
+        {
+          "caption": "3. Unbend your elbows and allow the weights to drop until they are at your side next to your legs. Uncurl your toes and breathe out.",
+          "image_url": "assets/ex11_start.png"
+        }
+      ],
+      "next": "Train Exercise 17 six times, then move on to Exercise 18.",
+      "equipment": "3-lb x 2"
+    },
+    {
+      "name": "Exercise 18",
+      "target": "Lower Back",
+      "start": {
+        "caption": "Pick up two 5-lb weights, one in each hand. Stand with your left and right feet touching. Allow the weight to hang by your sides with arms straight.",
+        "image_url": ""
+      },
+      "breath_in": "Take a deep breath and tighten the muscles in your legs while keeping your legs straight.  Curl your toes upward.",
+      "primary": [
+        {
+          "caption": "1. While keeping arms and legs straight, bend at the hip and allow the weights to descend toward the floor.",
+          "image_url": ""
+        },
+        {
+          "caption": "2. When the weights touch the floor or are as close to the floor as is comfortable, stand back up keeping arms and legs straight.",
+          "image_url": ""
+        }
+      ],
+      "extra": {
+        "caption": "1. Move the weights up one inch by lifting your shoulders up (keep both arms straight and hanging down). 2. Stand up on your toes.",
+        "image_url": ""
+      },
+      "breath_out": [
+        {
+          "caption": "Let you shoulders drop and stop standing on your toes. Uncurl your toes and breathe out.",
+          "image_url": ""
+        }
+      ],
+      "next": "Train Exercise 18 six times, then start again at Exercise 13 for 2 more rounds of Cycle C.",
+      "equipment": "5-lb x 2"
+    }
+  ]
+}

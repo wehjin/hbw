@@ -35,6 +35,11 @@ fn sequence(cycle: Cycle) -> Html {
 	let sequence = import_cycle(cycle).unwrap();
 	let title = format!("Cycle {}", sequence.name.to_uppercase());
 	let subtitle = format!("Ex {}-{}", sequence.start_num, sequence.end_num);
+	let hero_color = match cycle {
+		Cycle::B => "is-primary",
+		Cycle::C => "is-info",
+	};
+	let hero_class = format!("hero is-small {}", hero_color);
 	let cards = sequence.exercises.iter().map(exercise).collect::<Vec<Html>>();
 	let (b_class, c_class) = match cycle {
 		Cycle::B => ("is-active", ""),
@@ -49,7 +54,7 @@ fn sequence(cycle: Cycle) -> Html {
 		  </ul>
 		</div>
 		<div class="container">
-			<div class="hero is-small is-primary">
+			<div class={hero_class}>
 			  <div class="hero-body">
 			    <p class="title">{title}</p>
 			    <p class="subtitle">{subtitle}</p>

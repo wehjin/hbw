@@ -157,7 +157,7 @@ impl ToHtml for Step {
 			<div class="media">
 				<figure class="media-left">
 					<p class="image is-128x128 is-square">
-						<img src={self.image_url.to_string()} width=128 height=128 />
+						<img style="border: 1px solid #555;" src={self.image_url.to_string()} width=128 height=128 />
 					</p>
 				</figure>
 				<div class="media-content">
